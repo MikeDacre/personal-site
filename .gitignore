@@ -1,0 +1,58 @@
+# ── Local-only documentation. See docs/CLAUDE.md § 14.1 ─────────────────
+# docs/ is deliberately kept off GitHub. It is versioned in its own
+# independent git repository (docs/.git) which has NO remote configured.
+# Never `git add -f docs/`.
+docs/
+
+# A convenience symlink to docs/CLAUDE.md for tools that expect it at root.
+/CLAUDE.md
+
+# ── Hugo ────────────────────────────────────────────────────────────────
+public/
+resources/_gen/
+.hugo_build.lock
+hugo_stats.json
+
+# ── Secrets — NEVER commit. See CLAUDE.md § 3.1 ──────────────────────────
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+*.pem
+*.key
+!**/static/**/*.key
+wrangler.toml.local
+.wrangler/
+
+# ── Cloudflare / tooling ─────────────────────────────────────────────────
+.lighthouseci/
+node_modules/
+npm-debug.log*
+
+# ── Python (scripts/cv_extract.py) ───────────────────────────────────────
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.mypy_cache/
+.ruff_cache/
+
+# ── Editors ──────────────────────────────────────────────────────────────
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+.claude/settings.local.json
+
+# ── OS ───────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Scratch ──────────────────────────────────────────────────────────────
+tmp/
+*.log
+cv_extract_debug/
