@@ -1,0 +1,12 @@
+# Cloudflare Pages headers — docs/CLAUDE.md § 12.2.
+# Tighten the CSP further as the custom theme drops inline styles/scripts.
+# NEVER add unsafe-inline or unsafe-eval (prohibition 10).
+# object-src 'none' also mechanically enforces prohibition 11 (no <object> PDF embed).
+
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), interest-cohort=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://challenges.cloudflare.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'

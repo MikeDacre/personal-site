@@ -1,0 +1,82 @@
+{{ define "body_classes" }}page-cv{{ end }}
+
+{{ define "main" }}
+{{/* Renders /cv/ from data/cv.yml (docs/CLAUDE.md § 8). Never embed the PDF with
+     <object>/<iframe> — prohibition 11. Data is populated only via the
+     michaeldacre-site:cv-update pipeline, after § 8.4 screening. */}}
+{{ $cv := hugo.Data.cv }}
+<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-10">
+      <article class="content cv">
+        <h1 class="title">{{ .Title }}</h1>
+
+        {{ if fileExists "static/cv/Michael_Dacre_CV.pdf" }}
+        <p><a class="button" href="/cv/Michael_Dacre_CV.pdf">Download the CV as a PDF</a></p>
+        {{ end }}
+
+        {{ .Content }}
+
+        {{ $sections := slice
+          (dict "key" "education" "title" "Education")
+          (dict "key" "training" "title" "Postgraduate training")
+          (dict "key" "licensure" "title" "Licensure and certification")
+          (dict "key" "positions" "title" "Positions")
+          (dict "key" "publications" "title" "Publications")
+          (dict "key" "teaching" "title" "Teaching")
+          (dict "key" "service" "title" "Service")
+        }}
+        {{ $hasData := false }}
+        {{ range $sections }}
+          {{ if gt (len (index $cv .key | default slice)) 0 }}{{ $hasData = true }}{{ end }}
+        {{ end }}
+
+        {{ if not $hasData }}
+        <p>The full CV is being prepared for this page. It will cover education,
+        training, licensure, positions, publications, teaching, and service.</p>
+        {{ else }}
+          {{ range $sections }}
+            {{ $items := index $cv .key | default slice }}
+            {{ if gt (len $items) 0 }}
+            <section aria-labelledby="cv-{{ .key }}">
+              <h2 id="cv-{{ .key }}">{{ .title }}</h2>
+              <ul>
+                {{ range $items }}
+                <li>
+                  {{ with .institution }}<strong>{{ . }}</strong>{{ end }}
+                  {{ with .title }}<strong>{{ . }}</strong>{{ end }}
+                  {{ with .degree }} — {{ . }}{{ end }}
+                  {{ with .location }}, {{ . }}{{ end }}
+                  {{ if or .start .end }}
+                  ({{ .start }}{{ if and .start .end }}–{{ end }}{{ .end }})
+                  {{ end }}
+                  {{ with .detail }}<br>{{ . }}{{ end }}
+                </li>
+                {{ end }}
+              </ul>
+            </section>
+            {{ end }}
+          {{ end }}
+        {{ end }}
+
+        {{ with $cv.updated }}
+        <p><small>CV last updated {{ . }}.</small></p>
+        {{ end }}
+      </article>
+    </div>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Michael Dacre, MD",
+    "jobTitle": "Family Medicine Physician",
+    "url": "{{ .Site.BaseURL }}"
+  }
+}
+</script>
+{{ end }}

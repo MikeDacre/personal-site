@@ -1,0 +1,28 @@
+// Root override of themes/serif assets — outline:none removed from .hamburger and .hamburger:focus (WCAG 2.4.7: never remove the focus indicator; § 3.5). Otherwise identical. Ledger: docs/ROADMAP.md.
+.hamburger {
+  padding: 10px 0 10px 10px;
+
+  z-index: 30;
+  cursor: pointer;
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+  &:focus {
+
+  }
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    background: $primary;
+  }
+  .hamburger-inner::after {
+    width: 18px;
+    right: 0;
+  }
+  &.is-active {
+    .hamburger-inner::after {
+      width: inherit;
+      right: unset;
+    }
+  }
+}

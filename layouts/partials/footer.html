@@ -1,0 +1,16 @@
+{{/* Root override of themes/serif/layouts/partials/footer.html. Deltas:
+     <footer> landmark instead of a div (§ 3.5 landmarks), and the site title is a
+     styled <div> instead of an <h3> — the theme's h3 made every page's heading
+     outline skip from h1 to h3. Ledger: docs/ROADMAP.md. */}}
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <div class="footer-title h3">{{ .Site.Title }}</div>
+          {{ partial "footer-menu" . }}
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

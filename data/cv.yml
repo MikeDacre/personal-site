@@ -1,0 +1,18 @@
+# data/cv.yml — structured CV data rendered by layouts/cv/single.html.
+#
+# PLACEHOLDER SKELETON. Populate ONLY via the michaeldacre-site:cv-update
+# pipeline (docs/CLAUDE.md § 8): screen the source PDF for prohibited personal
+# data FIRST (§ 8.4), extract from the .docx via the Word connector, then
+# human-review the diff of this file before committing.
+#
+# § 3.4 reminder: board certifications must carry the certifying board's FULL
+# name ("American Board of Family Medicine", not "Family Medicine").
+name: "Michael Dacre, MD"
+updated: 2026-08-16
+education: []
+training: []       # residency, fellowships
+licensure: []      # licences and board certifications — full board names (§ 3.4)
+positions: []
+publications: []   # or reference data/bibliography.json when Phase 3 lands
+teaching: []
+service: []

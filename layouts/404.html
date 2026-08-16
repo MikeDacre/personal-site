@@ -1,0 +1,38 @@
+{{/* Root override of themes/serif/layouts/404.html. Fixes vs the theme copy:
+     lang attribute on <html> (WCAG 2.1 AA, § 3.5), meta description, real link
+     text instead of "Contact Us" buttons, trailing-slash URLs (no redirect hop).
+     Ledger: docs/ROADMAP.md. */}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Page not found — {{ .Site.Title }}</title>
+  <meta name="description" content="This page doesn't exist.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="{{ .Site.Params.favicon | relURL }}">
+  {{ $css_options := dict "targetPath" "css/style.css" "enableSourceMap" (not hugo.IsProduction) }}
+  {{ $style := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.scss" . | toCSS $css_options }}
+  {{ if hugo.IsProduction }}
+    {{ $style = $style | minify | fingerprint }}
+  {{ end }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+</head>
+
+<body class="page">
+  <div class="wrapper">
+    <main class="container pt-9 pb-9 pt-md-13 pb-md-13">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8">
+          <h1>Page not found</h1>
+          <p>Sorry — there's no page at this address. It may have moved, or the
+          link may be out of date.</p>
+          <p>You could head back to the <a href="/">home page</a>, or
+          <a href="/contact/">let me know</a> what you were looking for.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>

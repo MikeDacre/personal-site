@@ -1,0 +1,104 @@
+# hugo.toml — michaeldacre.com
+# Spec: docs/CLAUDE.md (local-only). Canonical hostname per § 12.3.
+baseURL = "https://www.michaeldacre.com/"
+locale = "en-us"
+title = "Michael Dacre, MD"
+theme = "serif"
+
+enableRobotsTXT = true
+
+# No tags/categories on this site.
+disableKinds = ["taxonomy", "term"]
+
+# Belt-and-braces: no analytics of any kind (docs/CLAUDE.md § 3.6).
+# The theme's analytics partials are also overridden to empty files in layouts/partials/.
+[privacy]
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.x]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.youtube]
+    privacyEnhanced = true
+
+[params]
+  favicon = "favicon.svg"
+
+  [params.homepage]
+    sticky_header = false       # no scroll-driven motion (§ 3.5, prefers-reduced-motion)
+    show_contact_box = false    # contact channels are Open Decision 3 — nothing published yet
+    show_services_button = false
+
+  [params.fonts]
+    # System fonts only for now; the Phase 5 design pass may add SELF-HOSTED fonts.
+    # google_fonts must stay EMPTY — any value re-enables a third-party font request
+    # in the theme (docs/CLAUDE.md § 3.6: self-host fonts, no third-party origins).
+    google_fonts = ""
+    heading = "Georgia"
+    base = "system-ui"
+
+  [params.colors]
+    # Contrast-checked 2026-08-16 (WCAG 2.1 AA, § 3.5):
+    #   primary #14556b on white = 8.26:1; white on primary = 8.26:1
+    #   black   #2f2f41 on white = 13.09:1
+    #   grey    #5c5a5a on white = 6.85:1
+    # Serif's default primary (#f24088) fails AA at 3.58:1 — do not restore it.
+    primary = "#14556b"
+    black = "#2f2f41"
+    white = "#ffffff"
+    white_offset = "#f6f7ff"
+    grey = "#5c5a5a"
+
+  [params.seo]
+    meta_og_image = ""
+
+  [params.footer]
+    copyright_text = "© 2026 Michael Dacre, MD"
+
+[menu]
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 1
+  [[menu.main]]
+    name = "How I practice"
+    url = "/practice/"
+    weight = 2
+  [[menu.main]]
+    name = "CV"
+    url = "/cv/"
+    weight = 3
+  [[menu.main]]
+    name = "Publications"
+    url = "/publications/"
+    weight = 4
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 5
+
+  [[menu.footer]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.footer]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 2
+  [[menu.footer]]
+    name = "Privacy"
+    url = "/legal/privacy/"
+    weight = 3
+  [[menu.footer]]
+    name = "Accessibility"
+    url = "/legal/accessibility/"
+    weight = 4
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false
+
+[sitemap]
+  changefreq = "monthly"

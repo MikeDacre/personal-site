@@ -1,0 +1,20 @@
+{{/* Root override for the /legal/ section list. Serif's default list template
+     emits no <h1>, which fails the one-h1 rule (§ 3.5). Minimal accessible
+     replacement. Ledger: docs/ROADMAP.md. */}}
+{{ define "body_classes" }}page-default-list{{ end }}
+
+{{ define "main" }}
+<div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+      <ul>
+        {{ range .Pages.ByWeight }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> — {{ .Description }}</li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</div>
+{{ end }}
