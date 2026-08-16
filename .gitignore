@@ -22,7 +22,6 @@ hugo_stats.json
 !.dev.vars.example
 *.pem
 *.key
-!**/static/**/*.key
 wrangler.toml.local
 .wrangler/
 
@@ -56,3 +55,7 @@ Thumbs.db
 tmp/
 *.log
 cv_extract_debug/
+
+# ── Releases — versioned zips for GitHub releases. Never committed. ─────
+# Built with `git archive` only (see BUILDING.md / CLAUDE.md § 13.1).
+releases/
