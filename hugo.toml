@@ -53,6 +53,11 @@ disableKinds = ["taxonomy", "term"]
   [params.seo]
     meta_og_image = ""
 
+  [params.contact]
+    # Booking: Proton Calendar refuses to be framed (frame-ancestors on
+    # calendar.proton.me excludes this origin) — link out, never iframe.
+    booking_url = "https://calendar.proton.me/bookings#De-8Svuap1AvLzNMWX2G2qfAtlWmtf9APNSrpaMwWUs="
+
   [params.footer]
     copyright_text = "© 2026 Michael Dacre, MD"
 
