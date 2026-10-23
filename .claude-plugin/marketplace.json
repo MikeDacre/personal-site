@@ -1,0 +1,14 @@
+{
+  "name": "personal-site",
+  "description": "Claude plugins that travel with the michaeldacre.com repository",
+  "owner": {
+    "name": "Michael Dacre, MD"
+  },
+  "plugins": [
+    {
+      "name": "michaeldacre-site",
+      "source": "./plugins/michaeldacre-site",
+      "description": "Guardrails, content review, and CV workflow for michaeldacre.com (B&P 651, PHI, secrets, WCAG 2.1 AA)."
+    }
+  ]
+}

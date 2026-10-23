@@ -1,0 +1,19 @@
+{
+  "name": "michaeldacre-site",
+  "version": "0.3.0",
+  "description": "Guardrails, content review, and CV workflow for michaeldacre.com \u2014 the personal site of Michael Dacre, MD. Encodes the hard constraints a physician's public website has to satisfy: no PHI, California B&P Code 651 advertising rules, WCAG 2.1 AA, and no secrets in a public repository.",
+  "author": {
+    "name": "Michael Dacre, MD"
+  },
+  "homepage": "https://www.michaeldacre.com",
+  "repository": "https://github.com/MikeDacre/personal-site",
+  "license": "MIT",
+  "keywords": [
+    "hugo",
+    "static-site",
+    "accessibility",
+    "wcag",
+    "physician",
+    "cloudflare-pages"
+  ]
+}
