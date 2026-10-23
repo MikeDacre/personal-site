@@ -1,10 +1,10 @@
-# ── Local-only documentation. See docs/CLAUDE.md § 14.1 ─────────────────
-# docs/ is deliberately kept off GitHub. It is versioned in its own
-# independent git repository (docs/.git) which has NO remote configured.
-# Never `git add -f docs/`.
-docs/
+# ── Local-only Claude documentation ──────────────────────────────────────
+# CLAUDE/ is deliberately kept off GitHub (notes, roadmap, changelog).
+# No loose docs/ or bin/ directories in the repo root: notes live in CLAUDE/
+# (or .claude/). Never `git add -f CLAUDE/`.
+CLAUDE/
 
-# A convenience symlink to docs/CLAUDE.md for tools that expect it at root.
+# A convenience symlink to CLAUDE/CLAUDE.md for tools that expect it at root.
 /CLAUDE.md
 
 # ── Hugo ────────────────────────────────────────────────────────────────

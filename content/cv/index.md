@@ -8,5 +8,5 @@ draft: false
 ---
 
 <!-- Rendered by layouts/cv/single.html from data/cv.yml.
-     Populate via the michaeldacre-site:cv-update pipeline (docs/CLAUDE.md § 8) —
+     Populate via the michaeldacre-site:cv-update pipeline (CLAUDE/CLAUDE.md § 8) —
      never by hand-editing data/cv.yml without screening the source PDF first. -->

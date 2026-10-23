@@ -1,7 +1,7 @@
 {{ define "body_classes" }}page-cv{{ end }}
 
 {{ define "main" }}
-{{/* Renders /cv/ from data/cv.yml (docs/CLAUDE.md § 8). Never embed the PDF with
+{{/* Renders /cv/ from data/cv.yml (CLAUDE/CLAUDE.md § 8). Never embed the PDF with
      <object>/<iframe> — prohibition 11. Data is populated only via the
      michaeldacre-site:cv-update pipeline, after § 8.4 screening. */}}
 {{ $cv := hugo.Data.cv }}

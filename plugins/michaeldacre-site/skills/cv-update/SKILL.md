@@ -192,12 +192,7 @@ run `michaeldacre-site:content-review` against the page before it ships.
 
 ## Afterwards
 
-Update `docs/CHANGELOG.txt` with what changed, and commit the docs repo separately:
-
-```bash
-git -C ~/sites/personal-site/docs add -A
-git -C ~/sites/personal-site/docs commit -m "docs: CV updated <date>"
-```
+Update `CLAUDE/CHANGELOG.txt` (local-only, gitignored) with what changed.
 
 Note the screening result in the changelog entry, including the date. The next person to
 run this workflow — likely a future session with no memory of this one — needs to know

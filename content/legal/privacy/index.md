@@ -8,7 +8,7 @@ draft: false
 ---
 
 <!-- PLACEHOLDER — Phase 2. This must stay ACCURATE to actual data handling
-     (docs/CLAUDE.md § 3.6): update it in the same commit as any change to
+     (CLAUDE/CLAUDE.md § 3.6): update it in the same commit as any change to
      what the site collects. The contact-form section becomes real in Phase 4. -->
 
 This is a personal website. It is built to collect as little about you as

@@ -5,15 +5,18 @@ of Michael Dacre, MD.
 
 ## Why this exists
 
-The full specification for the site lives in `docs/CLAUDE.md` in the
+The site's Claude-facing notes live in `CLAUDE/` in the
 [personal-site repository](https://github.com/MikeDacre/personal-site). That directory is
 deliberately gitignored and local-only, which means it is unreachable from a phone, from
 the web app, or from any fresh task without filesystem access.
 
 This plugin carries the parts that must never be missed — the hard rules and the review
-gates — so they travel with the account instead of depending on a file being present.
+gates — so they are versioned with the repo and travel with it instead of depending on a
+local file being present.
 
-`docs/CLAUDE.md` remains authoritative. Where the two disagree, it wins.
+The original detailed spec (formerly `docs/CLAUDE.md`) was deleted on 2026-10-22 and has
+not been recovered, so this plugin is currently the rule set of record. If a fuller
+`CLAUDE/CLAUDE.md` is restored, it wins where the two disagree.
 
 ## Skills
 
@@ -95,7 +98,7 @@ Validate after editing: `claude plugin validate ~/sites/personal-site`.
 Those are account-synced snapshots that can be overwritten; changes made there never reach
 the repo.
 
-When a rule in `docs/CLAUDE.md` changes (that directory is local-only and not in this
+When a rule in `CLAUDE/CLAUDE.md` changes (that directory is local-only and not in this
 repository), update this plugin in the same session. A plugin that drifts from the spec is
 worse than no plugin, because it will confidently assert a stale rule to a session that has
 no other source.

@@ -16,13 +16,14 @@ description: >
 You are working on the personal website of **Michael (Mike) Dacre, MD**, a fully licensed
 Family Medicine physician in California.
 
-Read `docs/CLAUDE.md` in the repository before making changes. It is the authoritative
-specification and is far more detailed than this skill. This skill exists because
-`docs/CLAUDE.md` is gitignored and local-only — on mobile, on the web, or in a fresh task
-with no filesystem, it will not be reachable. In that case this skill is what you have,
-and you should say so rather than guessing at detail it does not contain.
+Read `CLAUDE/CLAUDE.md` in the repository before making changes, if it exists. It is
+gitignored and local-only — on mobile, on the web, or in a fresh task with no filesystem,
+it will not be reachable. This skill is the rule set of record; if it is all you have,
+say so rather than guessing at detail it does not contain.
 
-Where this skill and `docs/CLAUDE.md` disagree, **`docs/CLAUDE.md` wins.**
+The original, far more detailed spec (formerly `docs/CLAUDE.md`; its numbered § references
+are still cited in code comments) was deleted on 2026-10-22 and has not been recovered. If
+a fuller `CLAUDE/CLAUDE.md` is restored, **it wins** where it disagrees with this skill.
 
 ## Why this site is not ordinary web work
 
@@ -122,14 +123,14 @@ Contact form is a Pages Function → Turnstile → Resend. No database, no persi
 
 `~/sites/personal-site` — public repo, github.com/MikeDacre/personal-site.
 
-`docs/` is **gitignored and has its own independent git repository with no remote**, so it
-cannot reach GitHub. It holds `CLAUDE.md`, `claude-instructions.txt`, `ROADMAP.md`, and
-`CHANGELOG.txt`. A gitignored symlink `CLAUDE.md -> docs/CLAUDE.md` sits at the root so
-auto-discovery resolves.
+`CLAUDE/` holds Claude-facing project notes (`CLAUDE.md`, `CHANGELOG.txt`, and
+`ROADMAP.md` once rebuilt). It is **gitignored and local-only**, so it cannot reach GitHub.
+A gitignored symlink `CLAUDE.md -> CLAUDE/CLAUDE.md` sits at the root so auto-discovery
+resolves. Mike's rule: no loose `docs/`, `bin/` or similar directories in the repo root —
+notes and tooling live under `CLAUDE/` or `.claude/`.
 
-A plain `git status` at the root will **not** show documentation changes. Check
-`git -C docs status` separately before ending a session. Never `git add -f docs/`, never
-add a remote to the docs repo, never replace the root symlink with a real file.
+A plain `git status` at the root will **not** show changes in `CLAUDE/`. Never
+`git add -f CLAUDE/`, never replace the root symlink with a real file.
 
 ## Tooling
 
@@ -165,8 +166,8 @@ Useful skills: `design:accessibility-review` before calling anything done,
 practice — but if it suggests npm or a framework, the no-npm rule wins.
 
 Connected but **not** for this project: Todoist, Notion, Google Calendar, Google Drive,
-Box, Zoom, Gmail, PayPal, and the clinical/research connectors. `docs/ROADMAP.md` is the
-tracker — do not mirror project tasks into Todoist or Notion.
+Box, Zoom, Gmail, PayPal, and the clinical/research connectors. `CLAUDE/ROADMAP.md` is the
+tracker (to be rebuilt) — do not mirror project tasks into Todoist or Notion.
 
 ## Routing — which tool for which task
 
@@ -216,4 +217,4 @@ Contrast verified. Headings semantic, one `<h1>`. Alt text present. Renders at 3
 no horizontal scroll. Lighthouse Accessibility 100, Performance ≥ 95. Front matter
 complete including `audience` and `lastmod`. Diff contains no secrets, no PHI, no DEA
 number, no home address. Content passes the § 651 review. Privacy policy still accurate if
-data handling changed. `docs/CHANGELOG.txt` updated and `git -C docs status` clean.
+data handling changed. `CLAUDE/CHANGELOG.txt` updated.

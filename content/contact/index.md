@@ -8,7 +8,7 @@ draft: false
 ---
 
 <!-- PLACEHOLDER — the contact form is Phase 4 (Pages Function → Turnstile → Resend,
-     docs/CLAUDE.md § 9). Which direct channels are published is Open Decision 3 —
+     CLAUDE/CLAUDE.md § 9). Which direct channels are published is Open Decision 3 —
      do NOT add an email address or phone number here until Mike decides.
      When the form lands, the PHI/emergency notice goes ABOVE the message field. -->
 

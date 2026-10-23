@@ -1,4 +1,4 @@
-# Cloudflare Pages headers — docs/CLAUDE.md § 12.2.
+# Cloudflare Pages headers — CLAUDE/CLAUDE.md § 12.2.
 # Tighten the CSP further as the custom theme drops inline styles/scripts.
 # NEVER add unsafe-inline or unsafe-eval (prohibition 10).
 # object-src 'none' also mechanically enforces prohibition 11 (no <object> PDF embed).

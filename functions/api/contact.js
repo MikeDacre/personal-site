@@ -1,11 +1,11 @@
 /**
  * Contact form handler — Cloudflare Pages Function.
- * Contract: docs/CLAUDE.md § 9.2. Privacy model: § 9.1.
+ * Contract: CLAUDE/CLAUDE.md § 9.2. Privacy model: § 9.1.
  *
  * Flow: honeypot → Turnstile (server-side, mandatory) → validate → send via Resend.
  *
  * Rate limiting is enforced AT THE EDGE by a Cloudflare WAF rate-limiting rule
- * on /api/contact (configured in the dashboard — see docs/CLAUDE.md § 12.5).
+ * on /api/contact (configured in the dashboard — see CLAUDE/CLAUDE.md § 12.5).
  * This Function is deliberately stateless: § 9.1 forbids KV/D1/Durable Objects,
  * and an in-isolate counter would be security theatre. Turnstile + the honeypot
  * are the in-function abuse controls.

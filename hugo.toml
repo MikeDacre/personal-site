@@ -1,5 +1,5 @@
 # hugo.toml — michaeldacre.com
-# Spec: docs/CLAUDE.md (local-only). Canonical hostname per § 12.3.
+# Spec: CLAUDE/CLAUDE.md (local-only). Canonical hostname per § 12.3.
 baseURL = "https://www.michaeldacre.com/"
 locale = "en-us"
 title = "Michael Dacre, MD"
@@ -10,7 +10,7 @@ enableRobotsTXT = true
 # No tags/categories on this site.
 disableKinds = ["taxonomy", "term"]
 
-# Belt-and-braces: no analytics of any kind (docs/CLAUDE.md § 3.6).
+# Belt-and-braces: no analytics of any kind (CLAUDE/CLAUDE.md § 3.6).
 # The theme's analytics partials are also overridden to empty files in layouts/partials/.
 [privacy]
   [privacy.googleAnalytics]
@@ -33,7 +33,7 @@ disableKinds = ["taxonomy", "term"]
   [params.fonts]
     # System fonts only for now; the Phase 5 design pass may add SELF-HOSTED fonts.
     # google_fonts must stay EMPTY — any value re-enables a third-party font request
-    # in the theme (docs/CLAUDE.md § 3.6: self-host fonts, no third-party origins).
+    # in the theme (CLAUDE/CLAUDE.md § 3.6: self-host fonts, no third-party origins).
     google_fonts = ""
     heading = "Georgia"
     base = "system-ui"

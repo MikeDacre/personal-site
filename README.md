@@ -45,7 +45,7 @@ npx wrangler pages dev public --compatibility-date=2026-08-15
  | `scripts/cv_extract.py`                | CV extraction. Run manually — never during the build.          |
  | `static/_headers`, `static/_redirects` | Cloudflare Pages headers and redirects                         |
 
-Project documentation — the build spec, roadmap, and changelog — lives in a `docs/`
+Project documentation — notes, roadmap, and changelog — lives in a `CLAUDE/`
 directory that is deliberately excluded from this repository. It is working material
 rather than anything a visitor or contributor needs, so it stays on my machine.
 

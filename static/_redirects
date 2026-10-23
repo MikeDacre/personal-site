@@ -3,8 +3,8 @@
 # Host-level redirects (apex michaeldacre.com, dacre.me, dacre.md → the
 # canonical https://www.michaeldacre.com) are handled in Cloudflare DNS /
 # Bulk Redirects, NOT here — this file only sees requests that already
-# reached the Pages project. See docs/CLAUDE.md § 12.3.
+# reached the Pages project. See CLAUDE/CLAUDE.md § 12.3.
 #
 # Phase 6: add the redirect map from old-site URLs so existing links don't
-# 404 (docs/ROADMAP.md). Format:
+# 404 (CLAUDE/ROADMAP.md). Format:
 #   /old-path  /new-path  301
