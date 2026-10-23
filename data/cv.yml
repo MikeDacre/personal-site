@@ -2,7 +2,8 @@
 #
 # Populated via the michaeldacre-site:cv-update pipeline from
 # ~/Documents/Professional/CV/Michael_Dacre_CV.docx (screened for prohibited
-# personal data first). Re-populate only through that pipeline; hand edits
+# personal data first). The published PDF is static/cv/Michael_Dacre_CV_public.pdf:
+# the master PDF with the phone/email line redacted (never publish the master). Re-populate only through that pipeline; hand edits
 # will be overwritten on the next run.
 #
 # § 3.4 reminder: board certifications must carry the certifying board's FULL
@@ -85,7 +86,7 @@ positions:
     end: "May 2022"
     detail: "Founded the LLC; hired three other medical students to teach CPR and first aid in the Bay Area"
 publications:   # or reference data/bibliography.json when Phase 3 lands
-  - title: "Han P, Rasmussen L, Su F, Dacre M, Knight L. High Variability in the Duration of Chest Compression Interruption is Associated With Poor Outcomes in Pediatric Extracorporeal Cardiopulmonary Resuscitation. Pediatric Critical Care Medicine. 2024;25(5):452–460."
+  - title: "Han P, Rasmussen L, Su F, Dacre M, et al. High Variability in the Duration of Chest Compression Interruption is Associated With Poor Outcomes in Pediatric Extracorporeal Cardiopulmonary Resuscitation. Pediatr Crit Care Med. 2024;25(5):452–460."
     detail: "doi:10.1097/PCC.0000000000003461"
   - title: "Dacre M, Branzetti J, Hopson LR, Regan L, Gisondi MA. Rejecting Reforms, Yet Calling for Change: A Qualitative Analysis of Proposed Reforms to the Residency Application Process. Acad Med. 2023;98(2):219–227."
     detail: "doi:10.1097/ACM.0000000000005100"

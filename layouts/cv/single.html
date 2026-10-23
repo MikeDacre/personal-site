@@ -11,8 +11,8 @@
       <article class="content cv">
         <h1 class="title">{{ .Title }}</h1>
 
-        {{ if fileExists "static/cv/Michael_Dacre_CV.pdf" }}
-        <p><a class="button" href="/cv/Michael_Dacre_CV.pdf">Download the CV as a PDF</a></p>
+        {{ if fileExists "static/cv/Michael_Dacre_CV_public.pdf" }}
+        <p><a class="button" href="/cv/Michael_Dacre_CV_public.pdf">Download the CV as a PDF</a></p>
         {{ end }}
 
         {{ .Content }}
